@@ -1,0 +1,249 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-create-block-proyecto-my-page {
+  width: var(--tamaño-card-x);
+  height:  var(--tamaño-card-y);
+  overflow: hidden;
+  display:flex;
+  flex-direction: column;
+  border: 5px  outset  #c8694ac0;
+  border-radius: 10px;
+  animation:shadowAnimado linear 15s infinite;
+  user-select: none;
+  cursor:pointer;
+  line-height:0;
+  position: relative;
+}
+:root{
+  --tamaño-card-x :225px ;
+  --tamaño-card-y : 150px;
+  --tamaño-iconos : 22px;
+  --tamaño-iconost : 16px;
+}
+
+.card__imagenes{
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  gap:0;
+  width: var(--tamaño-card-x);
+  height: var(--tamaño-card-y)
+}
+
+.card__imagenes__imagen{
+  position: absolute;
+  inset: 0;
+  width: var(--tamaño-card-x)!important;
+  height: var(--tamaño-card-y) !important;
+  pointer-events: none;
+  transition: all 500ms;
+}
+
+.card__saberMas{
+  position: absolute;
+  inset: 0;
+  height: fit-content;
+  top: calc(var(--tamaño-card-y) - var(--tamaño-card-y) / 4);
+  width: 100%;
+  background:#805240cc;
+  display: flex;
+  flex-direction: row;
+  align-items: center ;
+  justify-content: space-around;
+  padding: calc((var(--tamaño-card-y) / 4 - var(--tamaño-iconos)) / 2) 0 ;
+}
+.card__saberMas__links{
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+
+}
+.card__saberMas__links__link{
+
+  background:#faf7ce;
+  width: var(--tamaño-iconos);
+  height: var(--tamaño-iconos);
+  align-items: center;
+  border-radius: 100%;
+  box-sizing: border-box;
+  box-shadow: -2px 2px 5px rgba(148, 16, 16, 0.8);
+  animation: linkAnimacion 1s linear infinite;
+}
+.card__saberMas__links__link_icon{
+  fill: rgba(148, 16, 16, 0.8);
+  width: 100%;
+  height: 100%;
+}
+.card__saberMas__links__link:hover{
+  animation: linkAnimacion 1s linear infinite;
+}
+.card__saberMas__tecnologias{
+  height:100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
+}
+.card__saberMas__tecnologias > li{
+  list-style: none;
+  height: var(--tamaño-iconost);
+  width: var(--tamaño-iconost);
+}
+.card__saberMas__tecnologias__icon>svg{
+  fill:#faf7ce;
+  height: var(--tamaño-iconost);
+  width: var(--tamaño-iconost);
+}
+.card__saberMas__tecnologias__icon:hover>svg{
+  fill: #e0653bdc;
+}
+.card__bg{
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  height: fit-content;
+  width:100%;
+  color: rgba(0, 0, 0, 0);
+  background: rgba(163, 162, 162, 0.95);
+}
+
+.card__name{
+  position: absolute;
+  inset: 0;
+  height: fit-content;
+  background:#805240cc;
+  padding:4px;
+  font-size: 17px !important;
+  text-align: center;
+  text-shadow: -2px 2px 5px rgba(148, 16, 16, 0.8);
+  color:#faf7ce;
+  font-weight: 700 !important;
+  margin:0
+}
+@keyframes linkAnimacion {
+  0% {
+	box-shadow:0 0 15px rgb(148, 16, 16);
+	transform: rotate(-5deg)
+  }
+
+  50%{
+	box-shadow:0 0 25px #C86A4A;
+	transform: translate(0,-2px) rotate(5deg)
+  }
+
+  100% {
+	box-shadow:0 0 15px rgb(148, 16, 16);
+	transform: rotate(-5deg)
+  }
+}
+@keyframes animarImg {
+
+  0%{
+	opacity: 1;
+	transform: rotate(0deg) scale(1)
+  }
+  90%{
+	opacity: 0;
+	transform: rotate(2deg)  scale(2)
+  }
+  100%{
+	opacity: 0;
+	transform: rotate(0deg)  scale(1)
+  }
+}
+@keyframes animarImgR {
+
+  0%{
+
+	opacity: 0;
+	transform: rotate(0deg) scale(1)
+  }
+  100%{
+	opacity: 1;
+	transform:rotate(0deg) scale(1)
+  }
+}
+
+@keyframes shadowAnimado {
+  0% {
+	box-shadow:1px -1px 10px #ff4000;
+  }
+  25%{
+	box-shadow:-1px -1px 20px #f3c53b;
+  }
+  50%{
+	box-shadow:-1px 1px 10px rgb(117, 17, 17);
+  }
+  75%{
+	box-shadow:1px 1px 20px #f3c53b;
+  }
+  100% {
+	box-shadow:1px -1px  10px #ff4000;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  :root{
+	--tamaño-card-x :300px ;
+	--tamaño-card-y : 200px;
+	--tamaño-iconos : 31px;
+	--tamaño-iconost : 23px;
+  }
+  .card__saberMas__links{
+	gap:10px
+  }
+  .card__name{
+	font-size: 22px !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  :root{
+	--tamaño-card-x :290px ;
+	--tamaño-card-y : 185px;
+	--tamaño-iconos : 32px;
+	--tamaño-iconost :22px;
+  }
+  .card__saberMas__links{
+	gap:15px
+  }
+}
+@media screen and (min-width: 1024px) {
+  :root{
+	--tamaño-card-x :300px ;
+	--tamaño-card-y : 195px;
+	--tamaño-iconos : 28px;
+	--tamaño-iconost : 23px;
+  }
+  .card__saberMas__links__link{
+	animation: none;
+  }
+}
+@media screen and (min-width: 1440px) {
+
+  :root{
+	--tamaño-card-x :400px ;
+	--tamaño-card-y : 280px;
+	--tamaño-iconos : 45px;
+	--tamaño-iconost : 30px;
+  }
+  .card__name{
+	font-size: 30px !important;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-height: 600px) {
+  :root{
+	--tamaño-card-x :400px ;
+	--tamaño-card-y : 200px;
+	--tamaño-iconos : 35px;
+	--tamaño-iconost : 25px;
+  }
+  .card__name{
+	font-size: 25px !important;
+  }
+}

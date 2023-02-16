@@ -1,0 +1,39 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "create-block/proyecto-my-page",
+  "version": "0.1.0",
+  "title": "Proyecto My Page",
+  "category": "widgets",
+  "icon": "smiley",
+  "description": "Example block scaffolded with Create Block tool.",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "images": {
+      "type": "array",
+      "default": []
+    },
+    "sMiniIcon": {
+      "type": "string",
+      "default": "1,2,3"
+    },
+    "titulo": {
+      "type": "string",
+      "default": "Encriptador"
+    },
+    "linkGit": {
+      "type": "string",
+      "default": "https://lnkd.in/efsCaepv"
+    },
+    "linkWeb": {
+      "type": "string",
+      "default": "https://lnkd.in/e37fnhWF"
+    }
+  },
+  "textdomain": "proyecto-my-page",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

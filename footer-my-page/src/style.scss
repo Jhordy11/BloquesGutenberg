@@ -1,0 +1,133 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-create-block-footer-my-page {
+
+}
+
+.pieDePagina {
+  width: 100%;
+  height: 40px;
+  display: flex;
+
+  align-items: center;
+  background-color: rgba(65, 41, 43, 0.8);
+  justify-content: space-around;
+}
+.pieDePagina__copy {
+  color: #faf7ced3;
+  text-shadow: -2px 2px 3px rgba(148, 16, 16, 0.8);
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  margin: 0;
+}
+
+.pieDePagina__iconos {
+  display: flex;
+  gap: 10px;
+}
+.pieDePagina__iconos__a {
+  height: 22px !important;
+  width: 22px !important;
+  fill: #faf7ce;
+  box-shadow: -2px 2px 5px rgba(148, 16, 16, 0.8);
+  border-radius: 5px;
+  animation: linkAnimacionS linear 10s infinite;
+  line-height: 0 !important;
+}
+
+.pieDePagina__iconos__icon {
+  height: 26px !important;
+  width: 26px !important;
+  right: 2px;
+  top: -2px;
+  position: relative;
+  box-sizing: content-box;
+  fill: #faf7ce;
+  user-select: none;
+  line-height: 1 !important;
+}
+
+.pieDePagina__iconos__a:hover {
+  animation: linkAnimacionS linear 100s infinite;
+}
+
+.topScroll{
+  z-index: 10;
+  position: fixed;
+  bottom: 40px ;
+  right:-3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0;
+  transition: all 1s;
+  animation: rotacionSimpleScroll 3s ease infinite;
+}
+.topScroll>svg{
+  width: 35px;
+  height: 35px;
+  fill:rgba(65, 41, 43, 0.8);
+}
+@keyframes rotacionSimpleScroll {
+  0%{
+	transform: rotate(0);
+  }
+  80%{
+	transform: rotate(0);
+  }
+  85%{
+	transform: rotate(-3deg);
+  }
+  95%{
+	transform: rotate(3deg);
+  }
+  100%{
+	transform: rotate(0);
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .pieDePagina {
+	height: 50px;
+  }
+  .pieDePagina__copy {
+	font-size: 19px;
+  }
+  .pieDePagina__iconos {
+	gap: 17px;
+  }
+  .pieDePagina__iconos__a {
+	height: 28px !important;
+	width: 28px !important;
+  }
+  .pieDePagina__iconos__icon {
+	height: 32px !important;
+	width: 32px !important;
+  }
+  .topScroll{
+	bottom: 50px ;
+  }
+  .topScroll>svg{
+	width: 50px;
+	height: 50px;
+  }
+  .pieDePagina__iconos__a {
+	line-height: 1 !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+

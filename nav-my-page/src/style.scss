@@ -1,0 +1,244 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+html{
+  scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: rgb(68, 44, 36);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color:  #FAF7CE;
+  border-radius: 20px;
+}
+.wp-block-create-block-nav-my-page {
+  z-index: 10;
+  position: fixed;
+  width: 90%;
+  height: 30px;
+  background: rgba(65, 41, 43, 0.8);
+  box-shadow: -1px 1px 25px rgba(0, 0, 0, 0.5);
+  padding: 12.5px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__desplegable>a:nth-child(2){
+  display: none !important;
+}
+.nav__part {
+  display: flex;
+  height: auto;
+  gap: 10px;
+  align-items: center;
+}
+.nav__logo {
+  background-image: url(../assets/logo.svg);
+  background-color: transparent;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+}
+.nav__nombre {
+  color: #FAF7CE !important;
+  text-shadow: -2px 2px 5px rgba(148, 16, 16, 0.8);
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  margin: 0;
+}
+.nav__buttom{
+  width: 20px ;
+  height: 20px ;
+  background-image: url(../assets/flecha.svg);
+  background-color: transparent;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+.nav__desplegable {
+  background: rgba(65, 41, 43, 0.8);
+  position: fixed;
+  display:none;
+  flex-direction: column;
+  width: 100%;
+  inset: 55px 0 0 0;
+  height: 100vh;
+  align-items: center;
+  padding-top:35px;
+  gap:50px;
+  font-size: 40px !important;
+  font-weight: 900 !important;
+}
+
+.nav__desplegable__li {
+  text-decoration:none;
+  color: #FAF7CE !important;
+  text-shadow: -2px 2px 5px rgba(148, 16, 16, 0.8);
+  cursor: pointer;
+  margin: 0;
+}
+
+.nav__desplegable__li:hover{
+  animation:girarParcial 1500ms linear infinite !important ;
+}
+.nav__desplegable>a:link, .nav__desplegable>a:visited, .nav__desplegable>a:active {
+  text-decoration:none !important;
+}
+.shadowPersonalizadoMyPage{
+  text-shadow: -4px 2px 5px rgb(148 16 16 / 80%);
+}
+@keyframes aparecer {
+  0% {
+	opacity: 0;
+	transform: translate(0, -55px);
+  }
+  75% {
+	opacity: 0.9;
+  }
+  100% {
+	opacity: 1;
+	transform: translate(0, 0);
+  }
+}
+@keyframes desaparecer {
+  0% {
+	opacity: 1;
+	transform: translate(0, 0);
+  }
+  75% {
+	opacity: 0.8;
+  }
+  100% {
+	opacity: 0;
+	transform: translate(0, -55px);
+  }
+}
+@keyframes aparecerUl {
+  0% {
+	opacity: 0;
+
+  }
+
+  100% {
+	opacity: 1;
+  }
+}
+@keyframes desaparecerPadre {
+  0% {
+	opacity: 1;
+	visibility: visible;
+  }
+  100% {
+	opacity: 0;
+	visibility: collapse;
+  }
+}
+@keyframes desaparecerHijo {
+}
+
+@keyframes aparecerLetra {
+  0% {
+	transform:scale(0);
+  }
+  50% {
+	transform:scale(0);
+	opacity: 0;
+  }
+  100% {
+	transform:scale(100%);
+	opacity: 1;
+
+  }
+}
+
+
+
+@keyframes btnUl{
+  0% {
+	transform: rotate(0deg);
+  }
+  100% {
+	transform: rotate(90deg);
+  }
+}
+@keyframes btnUl2{
+  0% {
+	transform: rotate(90deg);
+  }
+  100% {
+	transform: rotate(0deg);
+  }
+}
+
+
+
+@keyframes girarParcial {
+  0% {
+	transform: rotate(0deg);
+  }
+  25%{
+	transform: rotate(2deg);
+  }
+  50%{
+	transform: rotate(-2deg);
+  }
+  75% {
+	transform: rotate(0deg);
+  }
+  100% {
+	transform: rotate(0deg);
+  }
+}
+
+@media screen and (min-width: 762px) {
+
+  .wp-block-create-block-nav-my-page{
+	justify-content: center;
+	gap:8%;
+  }
+  .nav__buttom{
+	display: none;
+  }
+  .nav__desplegable__li{
+	font-size: 22px !important;
+	font-weight: 700 !important;
+  }
+  .nav__desplegable{
+	display: flex;
+	gap: 20px;
+	background: none;
+	position: static;
+	flex-direction: row;
+	width: auto;
+	inset: inherit;
+	height: auto;
+	justify-content: center;
+	align-items: center;
+	padding-top:0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wp-block-create-block-nav-my-page {
+	gap: 290px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .wp-block-create-block-nav-my-page {
+	gap:410px;
+  }
+}
+

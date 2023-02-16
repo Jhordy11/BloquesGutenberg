@@ -1,0 +1,259 @@
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-create-block-inicio-my-page {
+  display: flex;
+  align-self: center !important;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 13px;
+}
+
+:root {
+  --altura-inicial-letras: 350px;
+  --tamaño-inicial-letras: 30px;
+  --tamaño-inicial-nombre: 45px;
+}
+
+.inicio__saludo {
+  position: relative;
+  align-self: start;
+  font-size: var(--tamaño-inicial-letras);
+  color: #faf7ce;
+  text-shadow: -2px 2px 1px rgba(148, 16, 16, 0.8);
+  display: flex;
+  gap: 1px;
+}
+
+.wp-block-create-block-inicio-my-page > section > span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inicio__saludo > span:nth-child(6) {
+  margin-right: 10px;
+}
+
+.wp-block-create-block-inicio-my-page > section > span > span:nth-child(1) {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: radial-gradient(circle, rgb(250, 247, 206) 45%, rgb(213, 150, 90) 100%);
+  box-shadow: -1px 1px 4px rgba(148, 16, 16, 0.9);
+  border-radius: 100% 0% 50% 50%/50% 0% 100% 50%;
+  transform: rotate(-45deg);
+  bottom: calc(var(--altura-inicial-letras) + var(--tamaño-inicial-letras) + 55px);
+  z-index: 10;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.wp-block-create-block-inicio-my-page > section > span > span:nth-child(2) {
+  position: relative;
+  opacity: 0;
+  transform: scale(0.3);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.inicio__nombre {
+  position: relative;
+  font-size: var(--tamaño-inicial-nombre);
+  color: #faf7ce;
+  text-shadow: -2px 2px 1px rgba(148, 16, 16, 0.8);
+  display: flex;
+  gap: 1px;
+}
+
+.inicio__tra {
+  position: relative;
+  font-size: 28px;
+  color: #faf7ce;
+  text-shadow: -2px 2px 1px rgba(148, 16, 16, 0.8);
+  display: flex;
+  gap: 1px;
+}
+
+.inicio__tra > span:nth-child(7) {
+  margin-right: 10px;
+}
+
+.wp-block-create-block-inicio-my-page {
+  transition: all 0.5s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.wp-block-create-block-inicio-my-page > section > span {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.wp-block-create-block-inicio-my-page > section:nth-child(1) {
+  animation: animarSection 5s ease-in-out infinite;
+}
+
+.wp-block-create-block-inicio-my-page > section:nth-child(2) {
+  animation: animarSection 5s ease-in-out 1s infinite;
+}
+
+.wp-block-create-block-inicio-my-page > section:nth-child(3) {
+  animation: animarSection 5s ease-in-out 2s infinite;
+}
+
+.animarMano > div {
+  animation: saludarMano 2000ms linear infinite;
+}
+
+@keyframes animarSection {
+  0% {
+    transform: scale(1) translateY(0px);
+  }
+  50% {
+    transform: scale(1) translateY(0px);
+  }
+  75% {
+    transform: scale(1.02) translateY(-2px);
+  }
+  100% {
+    transform: scale(1) translateY(0px);
+  }
+}
+@keyframes caerGota {
+  0% {
+    top: calc(0px - var(--altura-inicial-letras) - var(--tamaño-inicial-letras));
+  }
+  55% {
+    border-radius: 100% 0% 50% 50%/50% 0% 100% 50%;
+  }
+  60% {
+    top: 0;
+    opacity: 1;
+    transform: scale(1) rotate(-45deg);
+    border-radius: 50% 50% 50% 50%/50% 50% 50% 50%;
+  }
+  99% {
+    top: 0;
+    transform: scale(2.5) rotate(-45deg);
+    border-radius: 50% 50% 50% 50%/50% 50% 50% 50%;
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.8) rotate(0deg);
+    border-radius: 50% 50% 50% 50%/50% 50% 50% 50%;
+    top: 0;
+    opacity: 0;
+  }
+}
+@keyframes letrasSaludo {
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes saludarMano {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+}
+@keyframes rotardivXD {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes esconderLetra {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  90% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+@keyframes aparecerBola {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    top: calc(0px - var(--altura-inicial-letras) - var(--tamaño-inicial-letras));
+    border-radius: 100% 0% 50% 50%/50% 0% 100% 50%;
+    transform: scale(1);
+  }
+}
+@media screen and (min-width: 375px) {
+  :root {
+    --altura-inicial-letras: 450px;
+    --tamaño-inicial-letras: 37px;
+    --tamaño-inicial-nombre: 65px;
+  }
+  .inicio__saludo {
+    text-shadow: -4px 4px 3px rgba(148, 16, 16, 0.8);
+  }
+  .inicio__nombre {
+    text-shadow: -4px 4px 3px rgba(148, 16, 16, 0.8);
+  }
+  .inicio__tra {
+    text-shadow: -4px 4px 3px rgba(148, 16, 16, 0.8);
+    font-size: 37px;
+  }
+}
+@media screen and (min-width: 768px) {
+  :root {
+    --altura-inicial-letras: 500px;
+    --tamaño-inicial-letras: 40px;
+    --tamaño-inicial-nombre: 70px;
+  }
+  .letrasInicio {
+    margin-right: 35%;
+  }
+  .inicio__saludo {
+    text-shadow: -4px 4px 3px rgba(148, 16, 16, 0.8);
+  }
+  .inicio__nombre {
+    text-shadow: -4px 4px 3px rgba(148, 16, 16, 0.8);
+  }
+  .inicio__tra {
+    text-shadow: -4px 4px 3px rgba(148, 16, 16, 0.8);
+    font-size: 40px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  :root {
+    --altura-inicial-letras: 600px;
+  }
+  .wp-block-create-block-inicio-my-page {
+    width: auto;
+    margin: 0;
+  }
+}
+
+/*# sourceMappingURL=style-index.css.map*/

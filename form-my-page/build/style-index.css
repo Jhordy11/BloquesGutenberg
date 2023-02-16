@@ -1,0 +1,264 @@
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-create-block-form-my-page {
+  width: 80%;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--tamaño-gap-contacto);
+}
+
+:root {
+  --tamaño-input-x:200px;
+  --tamaño-input-yp: 30px;
+  --tamaño-input-yg: 125px;
+  --tamaño-gap-contacto:10px;
+  --tamaño-letra-label:16px;
+}
+
+.contacto__inputMensaje,
+.contacto__inputName,
+.contacto__inputEmail {
+  background-color: rgba(250, 247, 206, 0.5254901961);
+  border: none;
+  resize: none;
+  box-shadow: -1px 1px 3px rgba(148, 16, 16, 0.8);
+  padding: 5px 10px;
+  outline: none;
+  caret-color: rgba(148, 16, 16, 0.8);
+  color: rgba(122, 16, 16, 0.8);
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+.wp-block-create-block-form-my-page > input {
+  width: calc(var(--tamaño-input-x) - 20px);
+  height: calc(var(--tamaño-input-yp) - 10px);
+  border-radius: 8px;
+}
+
+.wp-block-create-block-form-my-page > input:last-child {
+  background-color: rgba(148, 16, 16, 0.74);
+  box-shadow: -2px 2px 2px #805240;
+  border-radius: 8px;
+  font-size: 17px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: #faf7ce;
+  border: none;
+  transition: all 0.7s;
+  text-align: center;
+  width: var(--tamaño-input-x);
+  padding: 2px 10px;
+  height: 34px;
+}
+
+.contacto__inputMensaje {
+  width: calc(var(--tamaño-input-x) - 20px);
+  height: calc(var(--tamaño-input-yg) - 10px);
+  border-radius: 8px;
+}
+
+.wp-block-create-block-form-my-page > label {
+  position: relative;
+  color: #b67752;
+  line-height: 1;
+  font-weight: 700;
+  text-shadow: -2px 2px 2px rgba(148, 16, 16, 0.3);
+  text-transform: uppercase;
+  transition: all 1s;
+  font-size: var(--tamaño-letra-label);
+}
+
+.contacto__name, .contacto__email {
+  bottom: calc(var(--tamaño-gap-contacto) + var(--tamaño-input-yp) / 2 + var(--tamaño-letra-label) / 2);
+}
+
+.contacto__name {
+  right: calc(var(--tamaño-input-x) / 2 - 45px);
+}
+
+.contacto__email {
+  right: calc(var(--tamaño-input-x) / 2 - 35px);
+}
+
+.contacto__mensaje {
+  bottom: calc(var(--tamaño-input-yg));
+  right: calc(var(--tamaño-input-x) / 2 - 47px);
+}
+
+.contacto__submit:hover {
+  transform: translate(0, -5px) scale(1.04);
+  box-shadow: -2px 5px 2px rgba(128, 82, 64, 0.7450980392);
+}
+
+.contacto__submit:active {
+  transform: translate(5px, 5px) scale(0.96);
+  box-shadow: -2px 2px 2px #805240;
+}
+
+.contacto__inputName:focus + .contacto__name,
+.contacto__inputName:valid + .contacto__name, .contacto__inputEmail:focus + .contacto__email,
+.contacto__inputEmail:valid + .contacto__email {
+  color: rgba(250, 247, 206, 0.8274509804);
+  text-shadow: -2px 2px 3px rgba(148, 16, 16, 0.8);
+  bottom: calc(var(--tamaño-gap-contacto) + var(--tamaño-input-yp) + var(--tamaño-letra-label) + var(--tamaño-gap-contacto) / 2);
+  right: calc(var(--tamaño-input-x) / 2 - 40px);
+  transform: scale(1.1);
+}
+
+.contacto__inputEmail:focus + .contacto__email,
+.contacto__inputEmail:valid + .contacto__email {
+  right: calc(var(--tamaño-input-x) / 2 - 30px);
+}
+
+.contacto__inputMensaje:focus + .contacto__mensaje,
+.contacto__inputMensaje:valid + .contacto__mensaje {
+  color: rgba(250, 247, 206, 0.8274509804);
+  text-shadow: -2px 2px 3px rgba(148, 16, 16, 0.8);
+  bottom: calc(var(--tamaño-input-yg) + 3 * var(--tamaño-gap-contacto));
+  right: calc(var(--tamaño-input-x) / 2 - 43px);
+  transform: scale(1.1);
+}
+
+.contacto__inputName:focus,
+.contacto__inputMensaje:focus,
+.contacto__inputEmail:focus {
+  animation: animarInput 10s linear infinite;
+}
+
+.contacto__inputName:focus:invalid,
+.contacto__inputMensaje:focus:invalid,
+.contacto__inputEmail:focus:invalid {
+  animation: invalidIntup 1s linear infinite;
+}
+
+@keyframes animarInput {
+  0% {
+    box-shadow: -1px 1px 5px rgb(117, 17, 17);
+  }
+  25% {
+    box-shadow: 1px 1px 5px rgb(117, 17, 17);
+  }
+  50% {
+    box-shadow: 1px -1px 5px rgb(117, 17, 17);
+  }
+  75% {
+    box-shadow: -1px -1px 5px rgb(117, 17, 17);
+  }
+  100% {
+    box-shadow: -1px 1px 5px rgb(117, 17, 17);
+  }
+}
+@keyframes invalidIntup {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-1deg);
+  }
+  50% {
+    transform: rotate(1deg);
+  }
+  75% {
+    transform: rotate(-1deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@media screen and (min-width: 375px) {
+  :root {
+    --tamaño-input-x:275px;
+    --tamaño-input-yp: 40px;
+    --tamaño-input-yg: 150px;
+    --tamaño-gap-contacto:12px;
+    --tamaño-letra-label:16px;
+  }
+}
+@media screen and (min-width: 320px) and (max-height: 667px) {
+  :root {
+    --tamaño-input-x:280px;
+    --tamaño-input-yp: 30px;
+    --tamaño-input-yg: 85px;
+    --tamaño-gap-contacto:5px;
+    --tamaño-letra-label:16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  :root {
+    --tamaño-input-x:400px;
+    --tamaño-input-yp: 45px;
+    --tamaño-input-yg: 250px;
+    --tamaño-gap-contacto:11px;
+    --tamaño-letra-label:16px;
+  }
+  .wp-block-create-block-form-my-page {
+    width: 56%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  :root {
+    --tamaño-input-x:500px;
+    --tamaño-input-yp: 40px;
+    --tamaño-input-yg: 115px;
+    --tamaño-gap-contacto:8px;
+    --tamaño-letra-label:16px;
+  }
+  .wp-block-create-block-form-my-page {
+    width: 56%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  :root {
+    --tamaño-input-x:500px;
+    --tamaño-input-yp: 40px;
+    --tamaño-input-yg: 125px;
+    --tamaño-gap-contacto:10px;
+    --tamaño-letra-label:16px;
+  }
+  .wp-block-create-block-form-my-page {
+    width: 50%;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1536px) {
+  :root {
+    --tamaño-input-x:600px;
+    --tamaño-input-yp: 45px;
+    --tamaño-input-yg: 200px;
+    --tamaño-gap-contacto:10px;
+    --tamaño-letra-label:18px;
+  }
+  .wp-block-create-block-form-my-page {
+    width: 40%;
+    gap: 10px;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .wp-block-create-block-form-my-page {
+    height: auto;
+  }
+}
+@media screen and (min-width: 768px) and (max-height: 600px) {
+  :root {
+    --tamaño-input-x:400px;
+    --tamaño-input-yp: 30px;
+    --tamaño-input-yg: 120px;
+    --tamaño-gap-contacto:5px;
+    --tamaño-letra-label:16px;
+  }
+}
+
+/*# sourceMappingURL=style-index.css.map*/
